@@ -9,11 +9,11 @@ description = "CLI perfume recommendation chatbot"
 requires-python = ">=3.9"
 
 dependencies = [
-  "langchain>=1.2.0",
-  "langchain-core>=1.2.0",
-  "langchain-community>=0.4.0",
-  "langchain-google-genai>=4.2.0",
-  "google-genai>=1.56.0",
+  "langchain",
+  "langchain-core",
+  "langchain-community",
+  "langchain-google-genai",
+  "google-genai",
   "rank-bm25",
   "python-dotenv"
 ]
