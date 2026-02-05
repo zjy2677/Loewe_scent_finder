@@ -12,7 +12,7 @@ import time
 import os
 
 # import all helper functions from other document 
-from config.py import xxxx
+from config.py import get_google_api_key
 from intent.py import xxxx
 from retrieval.py import xxxx
 from response_handler.oy import xxxx
