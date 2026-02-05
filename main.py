@@ -25,6 +25,11 @@ except ImportError:
     )
 
 def main():
+    # ask for your api key
+    get_google_api_key()
+    print(f"Your Google API KEY {os.getenv("GOOGLE_API_KEY")} is verified")
+    time.sleep(3000)
+    #----
     print(greet_user())
     # Build BM25 index ONCE
     json_path = "data/perfumes.json"
@@ -65,10 +70,6 @@ def main():
         history.append((user_text, assistant_text))
 
 if __name__ =="__main__":
-  api_key = input("Please provide your api key first:")
-  os.environ["GOOGLE_API_KEY"]="api_key"
-  load_dotenv()
-  print(f"Your Google API KEY {os.getenv("GOOGLE_API_KEY")} is verified")
   main()
       
 
