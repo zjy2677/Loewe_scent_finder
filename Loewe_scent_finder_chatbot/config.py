@@ -26,6 +26,12 @@ def get_google_api_key():
     os.environ["GOOGLE_API_KEY"] = key
     return key
 
+GEMINI_MODEL_FALLBACK = [
+    "gemini-2.5-flash-lite",
+    "gemini-2.5-flash",
+    "gemini-3-flash",
+]
+
 def get_gemini_llm(temperature=0.5):
     last_error = None
 
