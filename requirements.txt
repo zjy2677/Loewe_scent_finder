@@ -1,1 +1,8 @@
-
+langchain>=0.1.0
+langchain-core
+langchain-google-genai
+langchain-community
+rank-bm25
+faiss-cpu
+python-dotenv
+numpy
