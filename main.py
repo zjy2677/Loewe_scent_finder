@@ -13,9 +13,16 @@ import os
 
 # import all helper functions from other document 
 from config.py import get_google_api_key
-from intent.py import xxxx
-from retrieval.py import xxxx
-from response_handler.oy import xxxx
+from intent.py import route_intent
+from handlers import (
+    handle_recommendation,
+    handle_order,
+    handle_complaint,
+    handle_product_info,
+    handle_out_of_scope,
+    greet_user,
+)
+from retrieval import build_bm25
 
 try:
     import langchain
