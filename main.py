@@ -1,3 +1,11 @@
+try:
+    import langchain
+except ImportError:
+    raise RuntimeError(
+        "Dependencies not installed.\n"
+        "Run: pip install -r requirements.txt"
+    )
+
 def main():
     print(greet_user())
     # Build BM25 index ONCE
@@ -38,5 +46,7 @@ def main():
         print("\nAssistant:", assistant_text)
         history.append((user_text, assistant_text))
 
+if __name__ =="__main__":
+  main()
       
 
