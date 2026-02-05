@@ -2,6 +2,7 @@
 from dotenv import load_dotenv
 import time
 import os
+from importlib.resources import files
 
 # import all helper functions from other document 
 from Loewe_scent_finder_chatbot.config import get_google_api_key
@@ -34,8 +35,12 @@ def main():
     #----
     print(greet_user())
     # Build BM25 index ONCE
+    json_path = files("Loewe_scent_finder_chatbot").joinpath("data/perfumes.json")
+    data, bm25 = build_bm25(str(json_path))
+    '''
     json_path = "data/perfumes.json"
     data, bm25 = build_bm25(json_path)
+    '''
     history = []
     while True:
         user_text = input("You (type 'exit' to quit, 'history' to view): ").strip()
