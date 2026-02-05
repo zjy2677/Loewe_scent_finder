@@ -72,13 +72,6 @@ Be concise and do not invent notes/accords.
 """
     )
 
-   '''
-    llm = ChatGoogleGenerativeAI(
-        model="gemini-2.5-flash-lite",
-        google_api_key=os.getenv("GOOGLE_API_KEY"),
-        temperature=0.5,
-    )
-    '''
     llm = get_gemini_llm(temperature=0.5)
 
     chain = prompt | llm
