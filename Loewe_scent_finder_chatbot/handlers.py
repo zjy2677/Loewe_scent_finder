@@ -1,7 +1,7 @@
 import os
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_core.prompts import ChatPromptTemplate
-from retrieval import bm25_retrieve, candidate_to_context
+from Loewe_scent_finder_chatbot.retrieval import bm25_retrieve, candidate_to_context
 
 def handle_recommendation(user_text: str, history, data, bm25):
    return demosimple(user_text, history, data, bm25)
