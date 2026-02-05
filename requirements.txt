@@ -6,3 +6,4 @@ rank-bm25
 faiss-cpu
 python-dotenv
 numpy
+rank-bm25
