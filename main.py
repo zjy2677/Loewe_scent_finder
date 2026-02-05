@@ -55,7 +55,7 @@ def main():
         user_intent = route_intent(user_text)
 
         if user_intent == "recommendation":
-            assistant_text = demosimple(user_text, history, data, bm25)
+            assistant_text = handle_recommendation(user_text, history, data, bm25)
 
         elif user_intent == "order":
             assistant_text = handle_order()
@@ -73,6 +73,10 @@ def main():
         history.append((user_text, assistant_text))
 
 if __name__ =="__main__":
+  api_key = input("Please provide your api key first:")
+  os.environ["GOOGLE_API_KEY"]="api_key"
+  load_dotenv()
+  print(f"Your Google API KEY {os.getenv("GOOGLE_API_KEY")} is verified")
   main()
       
 
