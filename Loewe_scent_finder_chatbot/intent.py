@@ -1,7 +1,7 @@
 import os
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_core.prompts import ChatPromptTemplate
-from intents_config import INTENT_KEYWORDS, INTENTS, INTENT_PROMPT
+from Loewe_scent_finder_chatbot.intent_config import INTENT_KEYWORDS, INTENTS, INTENT_PROMPT
 
 def route_intent(text: str) -> str:
     text = text.lower()
