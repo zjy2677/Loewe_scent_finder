@@ -4,7 +4,7 @@ import time
 import os
 
 # import all helper functions from other document 
-from config import get_google_api_key
+from Loewe_scent_finder_chatbot.config import get_google_api_key
 from intent import route_intent
 from handlers import (
     handle_recommendation,
