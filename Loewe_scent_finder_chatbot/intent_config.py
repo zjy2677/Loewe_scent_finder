@@ -1,3 +1,5 @@
+from langchain_core.prompts import ChatPromptTemplate
+
 INTENT_KEYWORDS = {
     "recommendation": [
         "recommend", "suggest", "looking for", "similar to",
