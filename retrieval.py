@@ -26,9 +26,18 @@ def perfume_to_search_text(p: dict) -> str:
         p.get("level_2",""),
     ]
     return normalize(" ".join([x for x in parts if x]))
-
+'''
 def build_bm25(json_path: str):
     data = json.load(open(json_path, "r", encoding="utf-8"))
+    corpus = [perfume_to_search_text(p) for p in data]
+    tokenized = [doc.split() for doc in corpus]
+    bm25 = BM25Okapi(tokenized)
+    return data, bm25
+'''
+def build_bm25(json_path: str):
+    with open(json_path, "r", encoding="utf-8") as f:
+        data = json.load(f)
+
     corpus = [perfume_to_search_text(p) for p in data]
     tokenized = [doc.split() for doc in corpus]
     bm25 = BM25Okapi(tokenized)
