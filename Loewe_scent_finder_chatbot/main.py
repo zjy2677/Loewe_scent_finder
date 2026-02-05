@@ -26,7 +26,7 @@ def main():
     #----
     print(greet_user())
     # Build BM25 index ONCE
-    json_path = files("Loewe_scent_finder_chatbot").joinpath("data/perfumes.json")
+    #json_path = files("Loewe_scent_finder_chatbot").joinpath("data/merged_output.json")
     data, bm25 = build_bm25(str(json_path))
     '''
     json_path = "data/perfumes.json"
