@@ -17,15 +17,6 @@ from Loewe_scent_finder_chatbot.handlers import (
 )
 from Loewe_scent_finder_chatbot.retrieval import build_bm25
 
-
-try:
-    import langchain
-except ImportError:
-    raise RuntimeError(
-        "Dependencies not installed.\n"
-        "Run: pip install -r requirements.txt"
-    )
-
 def main():
     # ask for your api key
     get_google_api_key()
