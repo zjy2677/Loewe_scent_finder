@@ -2,6 +2,7 @@ import os
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_core.prompts import ChatPromptTemplate
 from Loewe_scent_finder_chatbot.retrieval import bm25_retrieve, candidate_to_context
+from Loewe_scent_finder_chatbot.config import get_gemini_llm
 
 def handle_recommendation(user_text: str, history, data, bm25):
    return demosimple(user_text, history, data, bm25)
@@ -71,11 +72,14 @@ Be concise and do not invent notes/accords.
 """
     )
 
+   '''
     llm = ChatGoogleGenerativeAI(
         model="gemini-2.5-flash-lite",
         google_api_key=os.getenv("GOOGLE_API_KEY"),
         temperature=0.5,
     )
+    '''
+    llm = get_gemini_llm(temperature=0.5)
 
     chain = prompt | llm
     resp = chain.invoke({"query": user_text, "context": context}).content
