@@ -25,4 +25,25 @@ Now run the main function to start chat
 ```bash
 main()
 ```
-## Strcuture of the repo 
+## Repository Structure
+
+```text
+Loewe_scent_finder/
+├── Loewe_scent_finder_chatbot/
+│   ├── data/
+│   │   ├── merged_output.json
+│   │   └── perfumes.json
+│   ├── __init__.py
+│   ├── config.py
+│   ├── handlers.py
+│   ├── intent.py
+│   ├── intent_config.py
+│   ├── retrieval.py
+│   └── main.py
+├── .env.example
+├── .gitignore
+├── README.md
+├── pyproject.toml
+└── requirements.txt
+```
+
