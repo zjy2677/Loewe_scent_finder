@@ -12,8 +12,8 @@ import time
 import os
 
 # import all helper functions from other document 
-from config.py import get_google_api_key
-from intent.py import route_intent
+from config import get_google_api_key
+from intent import route_intent
 from handlers import (
     handle_recommendation,
     handle_order,
