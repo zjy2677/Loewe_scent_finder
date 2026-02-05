@@ -1,3 +1,11 @@
+import os
+from langchain_google_genai import ChatGoogleGenerativeAI
+from langchain_core.prompts import ChatPromptTemplate
+from intents_config import INTENT_KEYWORDS, INTENTS
+from intents_prompt import INTENT_PROMPT
+
+
+
 INTENT_KEYWORDS = {
     "recommendation": [
         "recommend", "suggest", "looking for", "similar to",
