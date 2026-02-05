@@ -25,4 +25,4 @@ Now run the main function to start chat
 ```bash
 main()
 ```
-## Strcuture of the code
+## Strcuture of the repo 
