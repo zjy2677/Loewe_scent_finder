@@ -1,0 +1,38 @@
+def handle_recommendation(user_text: str, history, data, bm25):
+  demosimple(user_text, history, data, bm25)
+  
+
+def handle_order():
+  return (
+        "I can help with orders, shipping, and returns.\n"
+        "Please provide your order number or tell me what you'd like to check."
+    )
+
+
+def handle_complaint():
+  return (
+        "I'm sorry to hear that. Could you describe the issue in more detail?\n"
+        "For example: damaged item, wrong product, or delivery delay."
+    )
+
+def handle_out_of_scope():
+   return (
+        "I do not understand your questions. I'm here to help with perfume recommendations and product support.\n"
+        "Could you rephrase your question or tell me what you're looking for?"
+    )
+   
+def handle_product_info():
+  return(
+      "I "
+  )
+   
+def greet_user():
+    return (
+        "Hello 👋 Welcome!\n"
+        "I can help you:\n"
+        "• find a perfume recommendation\n"
+        "• answer product questions\n"
+        "• help with orders or issues\n\n"
+        "Just tell me what you're looking for 😊"
+    )
+
