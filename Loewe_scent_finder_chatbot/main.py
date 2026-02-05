@@ -5,8 +5,8 @@ import os
 
 # import all helper functions from other document 
 from Loewe_scent_finder_chatbot.config import get_google_api_key
-from intent import route_intent
-from handlers import (
+from Loewe_scent_finder_chatbot.intent import route_intent
+from Loewe_scent_finder_chatbot.handlers import (
     handle_recommendation,
     handle_order,
     handle_complaint,
@@ -14,7 +14,8 @@ from handlers import (
     handle_out_of_scope,
     greet_user,
 )
-from retrieval import build_bm25
+from Loewe_scent_finder_chatbot.retrieval import build_bm25
+
 
 try:
     import langchain
