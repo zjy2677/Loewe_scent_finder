@@ -1,6 +1,6 @@
 # Loewe_scent_finder
-This repo is a RAG-based chatbot for Loewe's scent finder
-## Setup
+This repo is a RAG-based chatbot for Loewe's scent finder. The databse for perfumes is a merged file from fragrantica and loewe.
+## How to use this in Google Colab
 Open colab notebook and open a cell, paste this command and run two times to make sure all google ai related packages are eliminated.
 ```bash
 !pip uninstall -y google-generativeai google-ai-generativelanguage langchain langchain-core langchain-community langchain-google-genai langgraph langgraph-prebuilt
@@ -25,3 +25,4 @@ Now run the main function to start chat
 ```bash
 main()
 ```
+## Strcuture of the code
