@@ -18,3 +18,9 @@ dependencies = [
   "python-dotenv",
   "numpy"
 ]
+
+[tool.setuptools]
+packages = ["Loewe_scent_finder_chatbot"]
+
+
+
