@@ -28,8 +28,9 @@ except ImportError:
 def main():
     # ask for your api key
     get_google_api_key()
+    time.sleep(2)
     print(f"Your Google API KEY {os.getenv("GOOGLE_API_KEY")} is verified")
-    time.sleep(3000)
+    time.sleep(2)
     #----
     print(greet_user())
     # Build BM25 index ONCE
