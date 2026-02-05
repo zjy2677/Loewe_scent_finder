@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "loewe-scent-finder"
+version = "0.1.0"
+description = "CLI perfume recommendation chatbot"
+requires-python = ">=3.9"
+
+dependencies = [
+  "langchain",
+  "langchain-core",
+  "langchain-google-genai",
+  "langchain-community",
+  "rank-bm25",
+  "faiss-cpu",
+  "python-dotenv",
+  "numpy"
+]
