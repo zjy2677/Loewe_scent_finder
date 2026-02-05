@@ -17,13 +17,7 @@ def route_intent(text: str) -> str:
     # set up a llm here to deal with more complex intent
     if best_score >= CONFIDENCE_THRESHOLD:
       return best_intent
-    '''
-    llm_intent_decider = ChatGoogleGenerativeAI(
-        model="gemini-2.5-flash-lite",
-        google_api_key=os.getenv("GOOGLE_API_KEY"),
-        temperature=0.0,
-    )
-    '''
+
     llm_intent_decider = get_gemini_llm(temperature=0.0)
     chain = INTENT_PROMPT | llm_intent_decider
     llm_intent_resp = chain.invoke({"text": text}).content.strip().lower()
