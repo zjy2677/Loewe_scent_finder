@@ -19,6 +19,15 @@ dependencies = [
   "numpy"
 ]
 
+[project.optional-dependencies]
+colab = [
+  "requests==2.32.4",
+  "google-auth==2.47.0",
+  "pydantic==2.12.3",
+  "cryptography<44",
+  "numpy<2.2"
+]
+
 [tool.setuptools]
 packages = ["Loewe_scent_finder_chatbot"]
 
