@@ -10,7 +10,7 @@ This project implements a perfume recommender for LOEWE fragrances, combining se
    - top notes
    - middle notes
    - base notes
-6. Return top-5 recommendations 
+6. Return top-4 recommendations 
 
 ## How to run the demo 
 ```bash
