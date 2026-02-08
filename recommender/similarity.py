@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np
 
 
-def get_similar_scents(canonical_title_query: str, scents_df: pd.DataFrame, top_k=5):
+def get_similar_scents(canonical_title_query: str, scents_df: pd.DataFrame, top_k=10):
     ''' 
     Given the canonical_title_query, return the top_k most similar scents based on cosine similarity 
     between the user query's description embedding and the scent description embeddings
